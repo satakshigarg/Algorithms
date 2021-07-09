@@ -1,7 +1,7 @@
-void swap(int a, int b) {
-    int temp = a;
-    a = b;
-    b = temp;
+void swap(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
     return;
 }
 
@@ -17,6 +17,6 @@ void selectionSort(int *arr, int n) {
             }
             end += 1;
         }
-        swap(arr[start], arr[ind]);
+        swap(&arr[start], &arr[ind]);
     }
 }
