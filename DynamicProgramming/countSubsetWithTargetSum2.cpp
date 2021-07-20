@@ -14,7 +14,7 @@ int countSubsetSum(int* arr, int n, int sum) {
     for (int i = 1; i <= n; i += 1) {
         for (int j = 1; j <= sum; j += 1) {
             if (arr[i-1] <= sum) {
-                dp[i][j] = dp[i-1][j] + dp[i-1][j-arr[i]];
+                dp[i][j] = dp[i-1][j] + dp[i-1][j-arr[i-1]];
             }
         }
     }
